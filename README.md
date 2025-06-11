@@ -5,8 +5,7 @@ Docker
 
 <h2>Como Rodar:</h2>
 após clonar o repositório, entre na pasta backend e confirme se entrypoint.sh está no formato LF </br>
-(No VSCode observe no canto inferior esquerdo da tela com o arquivo aberto, deve estar CRLF ou LF, caso esteja em CRLF selecione e troque para LF). 
-</br>
+(No VSCode observe no canto inferior esquerdo da tela com o arquivo aberto, deve estar CRLF ou LF, caso esteja em CRLF selecione e troque para LF). </br>
 Após ter feito essa verificação, de o comando:
 docker-compose build --no-cache
 docker-compose up
