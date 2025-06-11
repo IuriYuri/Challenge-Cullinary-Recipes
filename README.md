@@ -1,13 +1,17 @@
 # Challenge-Cullinary-Recipes
 
-Pré Requisitos:
+<h2>Pré Requisitos:</h2>
 Docker
 
-Como Rodar:
-após clonar o repositório, entre na pasta dele e de o comando:
-docker-compose up --build
+<h2>Como Rodar:</h2>
+após clonar o repositório, entre na pasta backend e confirme se entrypoint.sh está no formato LF </br>
+(No VSCode observe no canto inferior esquerdo da tela com o arquivo aberto, deve estar CRLF ou LF). 
 
-O Frontend pode ser acessado na porta 5173
+Após ter feito essa verificação, de o comando:
+docker-compose build --no-cache
+docker-compose up
+
+<h3>O Frontend pode ser acessado na porta 5173</h3>
 http://localhost:5173
-O Backend pode ser acessado na porta 3000
+<h3>O Backend pode ser acessado na porta 3000</h3>
 http://localhost:3000
