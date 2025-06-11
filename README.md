@@ -17,7 +17,7 @@
 
 No VSCode, abra o arquivo backend/entrypoint.sh.
 
-Verifique no canto inferior direito se está como LF.
+Verifique no canto inferior direito se o formato de final de linha está como LF.
 
 Caso esteja CRLF, altere para LF clicando sobre ele.
 
