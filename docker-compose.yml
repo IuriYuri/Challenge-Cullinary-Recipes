@@ -32,6 +32,6 @@ services:
     build: ./frontend
     container_name: frontend-receitas
     ports:
-      - "8080:5173"
+      - "5173:5173"
     depends_on:
       - backend
