@@ -1,16 +1,34 @@
-# Challenge-Cullinary-Recipes
+# Challenge - Culinary Recipes
 
-<h2>Pré Requisitos:</h2>
-Docker
+## Pré-requisitos
 
-<h2>Como Rodar:</h2>
-após clonar o repositório, entre na pasta backend e confirme se entrypoint.sh está no formato LF </br>
-(No VSCode observe no canto inferior esquerdo da tela com o arquivo aberto, deve estar CRLF ou LF, caso esteja em CRLF selecione e troque para LF). </br>
-Após ter feito essa verificação, de o comando:
-docker-compose build --no-cache
-docker-compose up
+- [Docker](https://www.docker.com/)
+- [Docker Compose](https://docs.docker.com/compose/)
+- IDE (recomendada: [VSCode](https://code.visualstudio.com/))
 
-<h3>O Frontend pode ser acessado na porta 5173</h3>
-http://localhost:5173
-<h3>O Backend pode ser acessado na porta 3000</h3>
-http://localhost:3000
+## Como Rodar o Projeto
+
+1. **Clone o repositório:**
+
+   ```bash
+   git clone https://github.com/iuriyuri/Challenge-Cullinary-Recipes.git
+   
+2. **Verifique o formato do arquivo entrypoint.sh:**
+
+No VSCode, abra o arquivo backend/entrypoint.sh.
+
+Verifique no canto inferior direito se está como LF.
+
+Caso esteja CRLF, altere para LF clicando sobre ele.
+
+3. **Construa os Containers:**
+  ```bash
+  docker-compose build --no-cache
+```
+4. **Inicie os Serviços:**
+  ```bash
+  docker-compose up
+```
+## Acessos:
+### Frontend pode ser acessado em http://localhost:5173
+### Backend pode ser acessado em http://localhost:3000
