@@ -1,0 +1,37 @@
+version: "3.8"
+
+services:
+  db:
+    image: mysql:8.0
+    container_name: mysql-receitas
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: teste_receitas_rg_sistemas
+    ports:
+      - "3306:3306"
+    volumes:
+      - ./db/script.sql:/docker-entrypoint-initdb.d/script.sql
+
+  backend:
+    build: ./backend
+    container_name: backend-receitas
+    ports:
+      - "3000:3000"
+    depends_on:
+      - db
+    environment:
+      DB_HOST: db
+      DB_PORT: 3306
+      DB_USER: root
+      DB_PASS: root
+      DB_NAME: teste_receitas_rg_sistemas
+      DATABASE_URL: "mysql://root:root@db:3306/teste_receitas_rg_sistemas"
+
+  frontend:
+    build: ./frontend
+    container_name: frontend-receitas
+    ports:
+      - "8080:5173"
+    depends_on:
+      - backend
